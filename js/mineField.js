@@ -31,30 +31,40 @@ let boomSet = new Set(boom)
 
 
 
+
 for (let i = 0; i < 100; i++) {
     let btn = document.getElementById(`${i}`)
-    if (life>0) {
+    
         btn.addEventListener("click",()=> {
             if (life>0) {
                 for (let bomb of boomSet) {
-                
                     if (btn.id == bomb) {
                         life -=1
                         score.innerHTML =`Kalan hakkınız ${life}`
-                        btn.style.backgroundColor = "#9b2226"
-                        
+                        btn.style.backgroundColor = "#9b2226"   
                     }
                 }
+            }else{
+                
+                score.innerHTML =`Kalan hakkınız bulunmamaktadır`
+                alert("kaybettin")
+                btn.disabled =true
+                
             }
-        })
-    }else{
-        btn.disabled = true
-        score.innerHTML =`Kalan hakkınız bulunmamaktadır`
-        alert("kaybettin")
-    }
 
- 
+        })
+    
+    
 }
+
+
+/*
+else{
+    
+    
+    score.innerHTML =`Kalan hakkınız bulunmamaktadır`
+    alert("kaybettin")
+}*/
 
 
 
