@@ -28,10 +28,6 @@ for (let i = 0; i < 100; i++) {
 }
 let boomSet = new Set(boom)
 
-
-
-
-
 for (let i = 0; i < 100; i++) {
     let btn = document.getElementById(`${i}`)
     
@@ -51,7 +47,6 @@ for (let i = 0; i < 100; i++) {
                 btn.disabled =true
                 
             }
-
         })
     
     
